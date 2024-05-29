@@ -212,12 +212,11 @@ while run:
             # генерация врагов на платформах
             if len(static_enemy_group) == 0:
                 for platform in platform_group:
-                    if random.randint(0, 1000) > 800 and score > 600 and not(p_moving):
+                    if random.randint(0, 1000) > 800 and score > 600 and not (p_moving):
                         temp_static_enemy = Enemy(0, 0, enemy_images)
                         static_enemy_x = p_x + (p_w // 2) - (temp_static_enemy.image.get_width() // 2)
                         static_enemy_y = p_y - temp_static_enemy.image.get_height()
                         static_enemy = Enemy(static_enemy_x, static_enemy_y, enemy_images)
-
                         static_enemy_group.add(static_enemy)
 
         # обновить платформы
